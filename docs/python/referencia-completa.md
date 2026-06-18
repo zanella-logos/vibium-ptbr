@@ -128,6 +128,19 @@ page.find(xpath="//button[contains(., 'Continuar')]")
 linhas = page.find_all("table tbody tr")
 ```
 
+### Nota sobre a versão 26.5.31
+
+A API expõe os localizadores semânticos listados acima. Em teste local, uma
+interação `fill()` após `page.find(label="Nome")` falhou porque o cliente não
+preservou o seletor interno do elemento. O seletor CSS equivalente funcionou.
+
+Se uma ação falhar após localização semântica nessa versão:
+
+1. confirme o comportamento com um exemplo mínimo;
+2. use um seletor CSS estável como alternativa;
+3. registre a versão do Vibium;
+4. reavalie após atualizar a biblioteca.
+
 ## 4. Mapeamento da página web
 
 A API Python `26.5.31` não possui um método `page.map()`. O comando `map`
@@ -490,4 +503,3 @@ finally:
 - [Repositório oficial](https://github.com/VibiumDev/vibium)
 - [Tutorial oficial de Python](https://github.com/VibiumDev/vibium/blob/main/docs/tutorials/getting-started-python.md)
 - [Daisy Ladybug — Python API](https://www.daisyladybug.com/vibium/python/)
-
