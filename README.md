@@ -81,7 +81,8 @@ esperado ocorreu.
 ## Compatibilidade
 
 O Vibium evolui rapidamente. Os exemplos deste guia foram elaborados com base
-na documentação disponível em junho de 2026. Confira a versão instalada:
+na documentação disponível em junho de 2026. Os comandos Python principais
+foram conferidos localmente com o Vibium `26.5.31`. Confira a versão instalada:
 
 ```bash
 pip show vibium
