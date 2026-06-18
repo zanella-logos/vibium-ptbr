@@ -35,6 +35,7 @@ por bibliotecas para Python, JavaScript/TypeScript e Java.
 - [Primeiro script com Python](docs/python/primeiro-script.md)
 - [Conceitos da API Python](docs/python/conceitos.md)
 - [Comandos Python por tópico](docs/python/comandos-por-topico.md)
+- [Referência completa da API Python](docs/python/referencia-completa.md)
 - [Primeiros passos com MCP](docs/mcp/primeiros-passos.md)
 - [Ferramentas MCP por tópico](docs/mcp/ferramentas-por-topico.md)
 - [Python ou MCP: qual escolher?](docs/python-ou-mcp.md)

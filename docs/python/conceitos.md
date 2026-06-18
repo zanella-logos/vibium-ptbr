@@ -55,12 +55,13 @@ Localizadores semânticos costumam expressar melhor a intenção do teste ou rob
 
 ## Interação
 
-O objeto retornado por `page.find()` representa um elemento:
+O objeto retornado por `page.find()` representa um elemento. Neste exemplo,
+usamos a variável `el`:
 
 ```python
-elemento.click()
-elemento.fill("valor")
-texto = elemento.text()
+el.click()
+el.fill("valor")
+texto = el.text()
 ```
 
 Nem todos os métodos servem para todos os elementos. Um campo pode ser
@@ -95,4 +96,3 @@ Prefira aguardar ou verificar uma condição relacionada ao resultado:
 
 Os métodos exatos de espera podem mudar entre versões; consulte a
 [referência atual](https://www.daisyladybug.com/vibium/python/).
-

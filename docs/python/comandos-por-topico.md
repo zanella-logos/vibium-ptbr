@@ -117,10 +117,10 @@ Prefira, nesta ordem prática:
 ## Elementos
 
 ```python
-elemento.click()
-elemento.dblclick()
-elemento.fill("valor")
-texto = elemento.text()
+el.click()
+el.dblclick()
+el.fill("valor")
+texto = el.text()
 ```
 
 ### Clique e foco
@@ -170,28 +170,28 @@ origem.drag_to(destino)
 ### Texto, HTML, valor e atributos
 
 ```python
-print(elemento.text())
-print(elemento.inner_text())
-print(elemento.html())
-print(elemento.value())
-print(elemento.attr("href"))
-print(elemento.get_attribute("data-id"))
+print(el.text())
+print(el.inner_text())
+print(el.html())
+print(el.value())
+print(el.attr("href"))
+print(el.get_attribute("data-id"))
 ```
 
 ### Consultar estado
 
 ```python
-elemento.is_visible()
-elemento.is_hidden()
-elemento.is_enabled()
-elemento.is_editable()
-elemento.is_checked()
+el.is_visible()
+el.is_hidden()
+el.is_enabled()
+el.is_editable()
+el.is_checked()
 ```
 
 ### Esperar estado
 
 ```python
-elemento.wait_until("visible", timeout=10_000)
+el.wait_until("visible", timeout=10_000)
 ```
 
 Antes de interagir, confirme que o localizador identifica o alvo correto.
@@ -222,9 +222,9 @@ comportamento real da tecla for relevante.
 Interação com elementos:
 
 ```python
-elemento.click()
-elemento.dblclick()
-elemento.hover()
+el.click()
+el.dblclick()
+el.hover()
 origem.drag_to(destino)
 ```
 
@@ -242,12 +242,12 @@ page.mouse.wheel(0, 600)
 Para descobrir a posição de um elemento:
 
 ```python
-caixa = elemento.bounding_box()
+caixa = el.bounding_box()
 print(caixa)
 ```
 
 Coordenadas são mais frágeis porque dependem de janela, zoom e layout. Use
-`elemento.click()`, `hover()` e `drag_to()` sempre que houver um alvo confiável.
+`el.click()`, `el.hover()` e `el.drag_to()` sempre que houver um alvo confiável.
 
 ## Scroll
 
@@ -255,7 +255,7 @@ Coordenadas são mais frágeis porque dependem de janela, zoom e layout. Use
 page.scroll("down", amount=3)
 page.scroll("up", amount=2)
 page.scroll("down", amount=1, selector="#conteudo")
-elemento.scroll_into_view()
+el.scroll_into_view()
 ```
 
 ## Esperas
@@ -277,7 +277,7 @@ Esperas mais específicas:
 ```python
 page.wait_until.loaded(timeout=30_000)
 page.wait_until.url("**/dashboard", timeout=30_000)
-elemento.wait_until("visible", timeout=10_000)
+el.wait_until("visible", timeout=10_000)
 ```
 
 `page.wait(ms)` é uma pausa fixa. Pode ser útil durante diagnóstico ou para uma
@@ -339,7 +339,7 @@ Path("pagina.png").write_bytes(png)
 Screenshot de um elemento:
 
 ```python
-Path("elemento.png").write_bytes(elemento.screenshot())
+Path("elemento.png").write_bytes(el.screenshot())
 ```
 
 PDF:
